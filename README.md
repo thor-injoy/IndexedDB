@@ -46,6 +46,16 @@ async function exampleFN(){
 exampleFN();
 ```
 
+**Example3:**
+```
+function exampleFN(){
+    IDB.getCall("ObjectToSave",function(data){
+        console.log(data.id, data.createdAt, data.somethingElse, data.otherThings);
+    });
+}
+exampleFN();
+```
+
 ### Remove the information from the indexedDB databse
 
 **Example1:**
