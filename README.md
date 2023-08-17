@@ -16,17 +16,17 @@ Simply copy and past object into your project or do the same with the script bel
 
 ### Save the information to the indexedDB database
 
-**Example1:** 
+**Example1: Save String to IndexedDB** 
 ```
 IDB.set("StringToSave","Here is a very long string");
 ```
 
-**Example2:** 
+**Example2: Save Object to IndexedDB** 
 ```
 IDB.set("ObjectToSave",{id:"4a640a26-cc87-42b9-bdce-79fs98b18f41",createdAt:null,somethingElse:"value",otherThings:[0,1,2,3,4,5,6,7,8,9]});
 ```
 
-**Example3:** 
+**Example3: Save Object to IndexedDB** 
 ```
 var exampleObject = {id:"4a640a26-cc87-42b9-bdce-79fs98b18f41",createdAt:null,somethingElse:"value",otherThings:[0,1,2,3,4,5,6,7,8,9]}
 IDB.set("ObjectToSave",exampleObject);
@@ -34,7 +34,7 @@ IDB.set("ObjectToSave",exampleObject);
 
 ### Retrieve the information from the indexedDB database
 
-**Example1:** 
+**Example1: Get function with Promise** 
 ```
 async function exampleFN(){
     let str = await IDB.get("StringToSave");
@@ -43,7 +43,7 @@ async function exampleFN(){
 exampleFN();
 ```
 
-**Example2:**
+**Example2: Get function with Promise**
 ```
 async function exampleFN(){
     let data = await IDB.get("ObjectToSave");
@@ -52,10 +52,10 @@ async function exampleFN(){
 exampleFN();
 ```
 
-**Example3:**
+**Example3: Get Function with Callback**
 ```
 function exampleFN(){
-    IDB.getCall("ObjectToSave",function(data){
+    IDB.get("ObjectToSave",function(data){
         console.log(data.id, data.createdAt, data.somethingElse, data.otherThings);
     });
 }
@@ -64,12 +64,12 @@ exampleFN();
 
 ### Remove the information from the indexedDB databse
 
-**Example1:**
+**Example1: Remove Saved String**
 ```
 IDB.remove("StringToSave");
 ```
 
-**Example2:** 
+**Example2: Remove Saved Object** 
 ```
 IDB.remove("ObjectToSave");
 ```
