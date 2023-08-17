@@ -9,8 +9,15 @@ IDB.js is an easy to use object that allows for local storage (not using localSt
 
 ### Save the information to the indexedDB database
 
-**Example1:** ```IDB.set("StringToSave","Here is a very long string");```
-**Example2:** ```IDB.set("ObjectToSave",{id:"4a640a26-cc87-42b9-bdce-79fs98b18f41",createdAt:null,somethingElse:"value",otherThings:[0,1,2,3,4,5,6,7,8,9]});```
+**Example1:** 
+```
+IDB.set("StringToSave","Here is a very long string");
+```
+
+**Example2:** 
+```
+IDB.set("ObjectToSave",{id:"4a640a26-cc87-42b9-bdce-79fs98b18f41",createdAt:null,somethingElse:"value",otherThings:[0,1,2,3,4,5,6,7,8,9]});
+```
 
 ### Retrieve the information from the indexedDB database
 
@@ -32,5 +39,12 @@ async function exampleFN(){
 
 ### Remove the information from the indexedDB databse
 
-**Example1:** ```IDB.remove("StringToSave");```
-**Example2:** ```IDB.remove("ObjectToSave");```
+**Example1:**
+```
+IDB.remove("StringToSave");
+```
+
+**Example2:** 
+```
+IDB.remove("ObjectToSave");
+```
