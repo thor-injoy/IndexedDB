@@ -6,7 +6,7 @@ IDB.js is an easy to use object that allows for local storage (not using localSt
 
 ## Installation
 
-Simply copy and paste object into your project or do the same with the script below (I promise I'll try to keep the one on my server up to date if anything changes).
+Simply copy and paste the IDB object into your project or do the same with the script below (I promise I'll try to keep the one on my server up to date if anything changes).
 
 ```
 <script src="https://thorleach.net/IDB.js" type="application/javascript"></script>
