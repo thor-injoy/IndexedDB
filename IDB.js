@@ -33,7 +33,32 @@ const IDB = {
         }
         
     },
-    get: async function(name){
+    getCall: function(name,callback){
+        let open = indexedDB.open(name);
+        open.onsuccess = function(evt) {
+            var db = open.result;
+            var tx = db.transaction(name);
+            var store = tx.objectStore(name);
+            
+            // Query the data
+            var query = store.get(name);
+
+            query.onsuccess = function(evt) {
+                let response = query.result.data;
+                callback(response);
+            };
+
+            query.onerror = function(evt) {
+                console.warn("Error",evt);
+            }
+
+            // Close the db when the transaction is done
+            tx.oncomplete = function() {
+                db.close();
+            };
+        }
+    },
+    get: function(name){
         return new Promise(function(resolve, reject) {
             let open = indexedDB.open(name);
             open.onsuccess = function(evt) {
