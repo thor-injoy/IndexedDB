@@ -15,20 +15,10 @@ IDB.js is an easy to use object that allows for local storage (not using localSt
 ### Retrieve the information from the indexedDB database
 
 **Example1:** 
-```async function exampleFN(){
-    // retrieve the string
-    let str = await IDB.get("StringToSave");
-    // do something with the string
-    console.log(str);
-}```
+```async function exampleFN(){let str = await IDB.get("StringToSave");console.log(str);}```
 
 **Example2:**
-```async function exampleFN(){
-    // retrieve the object
-    let data = await IDB.get("ObjectToSave");
-    // do something with the object
-    console.log(data.id, data.createdAt, data.somethingElse, data.otherThings);
-}```
+```async function exampleFN(){let data = await IDB.get("ObjectToSave");console.log(data.id, data.createdAt, data.somethingElse, data.otherThings);}```
 
 ### Remove the information from the indexedDB databse
 
