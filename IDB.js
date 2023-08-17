@@ -58,7 +58,7 @@ const IDB = {
             };
         }
     },
-    get: function(name){
+    get: function(name,callback){
         return new Promise(function(resolve, reject) {
             let open = indexedDB.open(name);
             open.onsuccess = function(evt) {
@@ -72,6 +72,9 @@ const IDB = {
                 query.onsuccess = function(evt) {
                     let response = query.result.data;
                     resolve(response);
+                    if (callback){
+                        callback(response);
+                    }
                 };
 
                 query.onerror = function(evt) {
