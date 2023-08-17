@@ -2,7 +2,7 @@
 
 ## Introduction
 
-IDB.js is an easy to use object that allows for local storage (not using localStorage) of large objects. It simplifies many of the "quirks" of indexedDB and operates somewhat like localStorage. It's not very flexible or effecient, but compensates for that shortcoming with raw simplicity. Please note that the IDB.get() function returns a promise and so be called from an async function as described below.
+IDB.js is an easy to use object that allows for local storage (not using localStorage) of large objects. It simplifies many of the "quirks" of indexedDB and operates somewhat like localStorage. It's not very flexible or effecient, but compensates for that shortcoming with raw simplicity. Please note that the IDB.get() function returns a promise and so must be called from an async function as described below.
 
 ## Installation
 
