@@ -106,7 +106,7 @@ const IDB = {
             let open = indexedDB.open(name);
             open.onsuccess = function(evt) {
                 let db = open.result;
-                resolve(true);
+                db.objectStoreNames.length > 0 ? resolve(true) : resolve(false);
                 db.close();
             }
             open.onerror = function(evt) {
@@ -130,4 +130,9 @@ const IDB = {
             }
         })  
     }
+}
+
+async function getIDB(){
+    let response = await IDB.check("testDB");
+    console.log(response);
 }
