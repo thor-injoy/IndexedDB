@@ -108,6 +108,7 @@ const IDB = {
                 let db = open.result;
                 db.objectStoreNames.length > 0 ? resolve(true) : resolve(false);
                 db.close();
+                IDB.remove(name);
             }
             open.onerror = function(evt) {
                 console.warn("Error",evt);
